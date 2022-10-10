@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Aclonica';
+    color: darkslategrey;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul{
+    margin: 0;
+}
+
+.nav li{
+    display: inline;
+    margin: 0px;
+}
+.nav a{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+.nav a:hover{
+    background-color: rgba(255,255,255, .3);
+}
+
+.main-nav{
+    text-align: center;
+    border-bottom: 2px solid rgba(5, 1, 1, 0.8);
+}
+.main-header{
+    /*Placeholder photo for testing*/
+    background-image: url('Images/1.jpg');
+    background-size: cover;
+    background-color: rgb(10, 217, 232);
+    background-blend-mode: multiply;
+}
+
+.title{
+    font-size: 4em;
+    top: 20%;
+    font-size: 20px;
+}
+
+.headpic1{
+    height: auto;
+    width: 200px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.grid-bodycontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    grid-column: 40px;
+    
+    background-color: antiquewhite;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+.grid-login{
+    padding-left: 15px;
+    text-align: center;
+    height: 200px;
+    width: 400px;
+    border: 3px solid #000000;
+}
+.grid-about{
+    padding-left: 15px;
+    text-align: center;
+    border: 3px solid #000000;
+}
+
+
