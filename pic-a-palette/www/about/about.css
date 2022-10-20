@@ -53,86 +53,52 @@ html, body{
 
 .BodySection{
     background-color: rgb(255, 252, 219);
+    border-bottom: 2px solid rgb(0, 0, 0);
     display: grid;
     grid-template-rows: 1fr;
     padding: 15px;
+    padding-bottom: 80px;
+    padding-left: 200px;
+    padding-right: 200px;
     text-align: center;
 }
 
-.CreateDIV{
-    padding: 20px;
-}
-
-.CreateButton{
+.TitleDIV{
+    padding: 15px;
     font-size: 25pt;
 }
 
-.WelcomeUN{
-    padding-bottom: 20px;
-    font-size: 20pt;
+.AboutWebsite {
+    border: 2px solid rgb(0, 0, 0);
+    padding: 15px;
 }
 
-.ScrollBar {
-    background-color: rgb(255, 255, 255);
-    border: none;
-    padding: 5px;
-    width: auto;
-    height: 600px;
-    overflow: scroll;
+.FooterSection{
+    background-color: rgb(255, 252, 219);
+    padding-bottom: 300px;
 }
 
-.ScrollGrid{
+.FooterDIV{
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-.Grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    border-bottom: 2px solid rgb(0, 0, 0);
-    padding: 5px;
+    grid-template-rows: 1fr;
     text-align: center;
 }
 
-.C1{
+
+.FooterBody{
     display: grid;
-    grid-template-rows: 1fr 50px;
-    padding: 5px;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.CreatorName{
+    padding: 15px;
 }
 
-.GDes{
-    border: 2px solid rgb(0, 0, 0);
-}
-
-.CC{
+.CreatorInfo{
     display: grid;
-    grid-template-rows: auto auto;
-    padding: 5px;
+    grid-template-rows: 1fr;
 }
 
-.Circle{
-    height: 50px;
-    width: 50px;
-    background-color: #bbb;
-    border-radius: 50%;
-    position: relative;
-    right: 55%;
-    left: 35%;
-}
-
-.HexN{
-    padding: 5px;
-}
-
-.Remove{
-    position: relative;
-    top: 30%;
-}
-
-.Footer{
-    background-color: rgb(255, 252, 219);
-    padding: 220px;
-}
 
 
 

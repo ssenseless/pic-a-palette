@@ -6,7 +6,7 @@
 <head>
     <title>Pic-A-Pallete</title>
     <meta name="description" content="This is the description">
-    <link rel="stylesheet" href="palette.css">
+    <link rel="stylesheet" href="register.css">
 </head>
 
 <body>
@@ -29,20 +29,38 @@
 
     <section class="BodySection">
         <div class="TitleDIV">
-            Creating a Pic-A-Pallete
+            Register
         </div>
-        <div class="SelectingBody">
+        <div class="ERE">
             <div></div>
             <div class="Register">
-                <div class="Pictures">
-                    <img src="2.jpg">
-                </div>
-                <div class="Buttons">
-                    <div class="YesDIV">
-                        <button>Yes</button>
+                <div class="RSection">
+                    <div>
+                        E-Mail:
                     </div>
-                    <div class="noDIV">
-                        <button>No</button>
+                    <div>
+                        <input type="">
+                    </div>
+                </div>
+                <div class="RSection">
+                    <div>
+                        Username:
+                    </div>
+                    <div>
+                        <input type="">
+                    </div>
+                </div>
+                <div class="RSection">
+                    <div>
+                        Password:
+                    </div>
+                    <div>
+                        <input type="">
+                    </div>
+                </div>
+                <div class="SignUpB">
+                    <div>
+                        <button> Sign-Up </button>
                     </div>
                 </div>
             </div>
@@ -52,6 +70,7 @@
 </body>
 
 <footer class="Footer">
+
 </footer>
 
 
