@@ -18,8 +18,5 @@ function prepare_and_execute_sql($sql) {
 
     $result = $conn->query($sql);
 
-    if ($result === false) {
-        die("error");
-    }
     return $result;
 }
