@@ -1,28 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     font-family: 'Aclonica';
-    color: darkslategrey;
 }
 
-html, body{
+html,
+body {
     margin: 0;
     padding: 0;
 }
 
-
-.nav li{
+.nav li {
     display: inline;
-    margin: 20px;
+    margin: 40px;
 }
-.nav a{
+
+.nav a {
     display: inline-block;
-    color: black;
+    color: rgb(194, 227, 246);
     text-decoration: none;
-}
-.nav a:hover{
-    background-color: rgba(255,255,255, .3);
 }
 
 .HeaderDIV {
@@ -30,76 +27,137 @@ html, body{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.HeaderSec{
+.HeaderSec {
     text-align: center;
-}
-
-.main-header{
+  }
+  
+  .main-header {
     /*Placeholder photo for testing*/
-    background-image: url('Images/1.jpg');
     background-size: cover;
-    background-color: rgb(10, 217, 232);
+    background-color: rgb(26, 26, 26);
     background-blend-mode: multiply;
     padding: 10px;
-    border-bottom: 2px solid rgb(0, 0, 0);
-}
+  }
 
 
-.Tabs{
+  .Tabs {
+    display: inline;
     font-size: 4em;
     top: 20%;
     font-size: 20px;
-}
+    padding: 10px;
+    border: 1px solid rgb(92, 92, 92);
+    border-radius: 25%;
+  }
+  
+  .Tabs:hover {
+    background-color: rgba(255, 255, 255, .3);
+    background-size: 20px;
+  }
+  
+  .Tabs:active {
+    color: rgb(101, 99, 99);
+    background-color: rgb(26, 26, 26);
+  }
 
-.BodySection{
-    background-color: rgb(255, 252, 219);
+  .BodySection {
     display: grid;
     grid-template-rows: 1fr;
     padding: 15px;
     text-align: center;
-}
+  }
+  .random-background {
+    background-image: paint(voronoiPattern);
+  }
+  @property --pattern-seed {
+    syntax: "<number>";
+    initial-value: 60000;
+    inherits: true;
+  }
+  
+  @property --pattern-background {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #5989b7;
+  }
+  
+  @property --pattern-colors {
+    syntax: "<color>#";
+    initial-value: #391f3c, rgb(101, 99, 99);
+    inherits: true;
+  }
 
-.TitleDIV{
+  .TitleDIV {
     padding: 15px;
-    font-size: 25pt;
-}
+    font-size: 60pt;
+    color: rgb(246, 246, 246);
+    font-size: 20pt;
+    padding-bottom: 1%;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: rgb(26, 26, 26);
+    background: cover;
+    border-radius: 15px;
+  }
 
-.SelectingBody{
+.SelectingBody {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .Register {
-    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(26, 26, 26);
+    border-radius: 15px;
     padding: 15px;
     display: grid;
     grid-template-rows: auto 50px;
     text-align: center;
-    
+
 }
 
-.RSection{
+.RSection {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 10px;
 }
 
-.Pictures{
-    border: 2px solid rgb(0, 0, 0);
+.Pictures {
+    border-radius: 15px;
 }
 
-.Buttons{
+.Buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 15px;
-    
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.yes_button{
+  background-color: rgb(194, 227, 246);
+  padding: 10px;
+  border-radius: 15px;
+  font-size: medium;
+}
+.yes_button:hover{
+  background-color: rgb(255,215,0); 
+}
+.yes_button:active{
+  background-color: rgba(255, 217, 0, 0.67); 
 }
 
-.Footer{
-    background-color: rgb(255, 252, 219);
+.no_button{
+  background-color: rgb(194, 227, 246);
+  padding: 10px;
+  border-radius: 15px;
+  font-size: medium;
+}
+.no_button:hover{
+  background-color: rgb(255, 18, 18); 
+}
+.no_button:active{
+  background-color: rgba(191, 4, 4, 0.67); 
+}
+
+.Footer {
     padding: 220px;
 }
-
-
-
-

@@ -1,97 +1,143 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
-*{
-    box-sizing: border-box;
-    font-family: 'Aclonica';
-    color: darkslategrey;
+* {
+  box-sizing: border-box;
+  font-family: 'Aclonica';
+  color: rgb(194, 227, 246);
 }
 
-html, body{
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
+.nav li {
+  display: inline;
+  margin: 40px;
+}
 
-.nav li{
-    display: inline;
-    margin: 20px;
-}
-.nav a{
-    display: inline-block;
-    color: black;
-    text-decoration: none;
-}
-.nav a:hover{
-    background-color: rgba(255,255,255, .3);
+.nav a {
+  display: inline-block;
+  color: rgb(194, 227, 246);
+  text-decoration: none;
 }
 
 .HeaderDIV {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.HeaderSec{
-    text-align: center;
+.HeaderSec {
+  text-align: center;
 }
 
-.main-header{
-    /*Placeholder photo for testing*/
-    background-image: url('Images/1.jpg');
-    background-size: cover;
-    background-color: rgb(10, 217, 232);
-    background-blend-mode: multiply;
-    padding: 10px;
-    border-bottom: 2px solid rgb(0, 0, 0);
+.main-header {
+  /*Placeholder photo for testing*/
+  background-size: cover;
+  background-color: rgb(26, 26, 26);
+  background-blend-mode: multiply;
+  padding: 10px;
 }
 
-
-.Tabs{
-    font-size: 4em;
-    top: 20%;
-    font-size: 20px;
+.Tabs {
+  display: inline;
+  font-size: 4em;
+  top: 20%;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid rgb(92, 92, 92);
+  border-radius: 25%;
 }
 
-.BodySection{
-    background-color: rgb(255, 252, 219);
-    border-bottom: 2px solid rgb(0, 0, 0);
-    display: grid;
-    grid-template-rows: 1fr;
-    padding: 15px;
-    padding-bottom: 80px;
-    padding-left: 200px;
-    padding-right: 200px;
-    text-align: center;
+.Tabs:hover {
+  background-color: rgba(255, 255, 255, .3);
+  background-size: 20px;
 }
 
-.TitleDIV{
-    padding: 15px;
-    font-size: 25pt;
+.Tabs:active {
+  color: rgb(101, 99, 99);
+  background-color: rgb(26, 26, 26);
+}
+.BodySection {
+  display: grid;
+  grid-template-rows: 1fr;
+  padding: 15px;
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
-.AboutWebsite {
-    border: 2px solid rgb(0, 0, 0);
-    padding: 15px;
+.random-background {
+  background-image: paint(voronoiPattern);
+}
+@property --pattern-seed {
+  syntax: "<number>";
+  initial-value: 60000;
+  inherits: true;
 }
 
-.FooterSection{
-    background-color: rgb(255, 252, 219);
-    padding-bottom: 300px;
+@property --pattern-background {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #5989b7;
 }
 
-.FooterDIV{
-    display: grid;
-    grid-template-rows: 1fr;
-    text-align: center;
+@property --pattern-colors {
+  syntax: "<color>#";
+  initial-value: #391f3c, rgb(101, 99, 99);
+  inherits: true;
 }
 
-
-.FooterBody{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
+.TitleDIV {
+  padding: 20px;
+  font-size: 25pt;
+  background-color: rgb(26, 26, 26);
+  border-radius: 15px;
+  color: rgb(194, 227, 246);
 }
-.CreatorName{
-    padding: 15px;
+.AboutWebsite{
+  font-size: 15pt;
+  padding: 5%;
+  margin-top: 5%;
+  background-color: rgb(26, 26, 26);
+  border-radius: 15px;
+  color: rgb(194, 227, 246);
+}
+
+.BodyDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.FooterSection {
+  background-size: cover;
+  padding-bottom: 120px;
+}
+.FooterTitle{
+  color: rgb(246, 246, 246);
+  font-size: 20pt;
+}
+.FooterName{
+  background-color: rgb(26, 26, 26);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-left: 25%;
+  margin-right: 25%;
+  border-radius: 15px;
+  color: rgb(194, 227, 246);
+}
+
+.FooterDIV {
+  display: grid;
+  grid-template-rows: 1fr;
+  text-align: center;
+}
+
+.FooterBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 25px;
 }
 
 .CreatorInfo{
@@ -99,7 +145,9 @@ html, body{
     grid-template-rows: 1fr;
 }
 
-
-
-
-
+.linkedin1{
+    height: 90px;
+}
+.photo1{
+    width: 100px;
+}

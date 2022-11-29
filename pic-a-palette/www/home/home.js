@@ -40,7 +40,8 @@ $(document).ready(function () {
         clearTimeout(home_color_timeout);
       }
     })(count);
-    setTimeout(random_picture, 5000);
+
+    setTimeout(random_picture, 15000);
   })();
 
   $("#login").click(function (event) {

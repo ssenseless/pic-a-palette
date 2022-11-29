@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   font-family: "Aclonica";
-  color: darkslategrey;
+  color: rgb(194, 227, 246);
 }
 
 html,
@@ -14,15 +14,13 @@ body {
 
 .nav li {
   display: inline;
-  margin: 20px;
+  margin: 40px;
 }
+
 .nav a {
   display: inline-block;
-  color: black;
+  color: rgb(194, 227, 246);
   text-decoration: none;
-}
-.nav a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .HeaderDIV {
@@ -32,30 +30,63 @@ body {
 
 .HeaderSec {
   text-align: center;
+  font-size: 25pt;
 }
 
 .main-header {
   /*Placeholder photo for testing*/
-  background-image: url("../../secure/data/permanent/001.jpg");
   background-size: cover;
-  background-color: rgb(10, 217, 232);
+  background-color: rgb(26, 26, 26);
   background-blend-mode: multiply;
   padding: 10px;
-  border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 .Tabs {
+  display: inline;
   font-size: 4em;
   top: 20%;
   font-size: 20px;
+  padding: 10px;
+  border: 1px solid rgb(92, 92, 92);
+  border-radius: 15%;
+}
+.Tabs:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  background-size: 20px;
+}
+
+.Tabs:active {
+  color: rgb(101, 99, 99);
+  background-color: rgb(26, 26, 26);
 }
 
 .BodySection {
-  background-color: rgb(255, 252, 219);
   display: grid;
   grid-template-rows: 1fr;
   padding: 15px;
   text-align: center;
+}
+
+.random-background {
+  background-image: paint(voronoiPattern);
+}
+
+@property --pattern-seed {
+  syntax: "<number>";
+  initial-value: 60000;
+  inherits: true;
+}
+
+@property --pattern-background {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #5989b7;
+}
+
+@property --pattern-colors {
+  syntax: "<color>#";
+  initial-value: #391f3c, rgb(101, 99, 99);
+  inherits: true;
 }
 
 .CreateDIV {
@@ -64,6 +95,21 @@ body {
 
 .CreateButton {
   font-size: 25pt;
+  background-color: rgb(26, 26, 26);
+  border-radius: 15px;
+  padding: 1%;
+}
+.CreateButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.CreateButton:active {
+  background-color: rgb(26, 26, 26);
+}
+.CreateLink {
+  text-decoration: none;
+}
+.CreateLink:visited {
+  text-decoration: none;
 }
 
 .WelcomeUN {
@@ -72,7 +118,7 @@ body {
 }
 
 .ScrollBar {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(26, 26, 26);
   border: none;
   padding: 5px;
   width: auto;
@@ -129,6 +175,5 @@ body {
 }
 
 .Footer {
-  background-color: rgb(255, 252, 219);
   padding: 220px;
 }
