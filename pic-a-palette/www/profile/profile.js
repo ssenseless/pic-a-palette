@@ -1,4 +1,12 @@
 $(document).ready(function () {
+  $.ajax({
+    type: "GET",
+    url: "../../secure/functions/retrieve_username.php",
+    success: function (retval) {
+      $("#userhere").html(`Welcome ${retval}`);
+    },
+  });
+
   $("#signout").click(function (event) {
     event.preventDefault();
 

@@ -32,7 +32,7 @@ $(document).ready(function () {
 
       count++;
 
-      if (count < 6) {
+      if (count < 11) {
         var home_color_timeout = setTimeout(function () {
           home_color(count);
         }, 999);
@@ -41,11 +41,14 @@ $(document).ready(function () {
       }
     })(count);
 
-    setTimeout(random_picture, 15000);
+    setTimeout(random_picture, 10000);
   })();
 
   $("#login").click(function (event) {
     event.preventDefault();
+
+    console.log($("#username").val());
+    console.log($("#password").val());
 
     $.ajax({
       type: "POST",
