@@ -1,5 +1,5 @@
 <?php
-require "palettize.php";
+require "./palettize.php";
 header('Access-Control-Allow-Origin: http://localhost:3000');
 
 $array = [];

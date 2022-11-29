@@ -1,7 +1,7 @@
 <?php
 
-require "color.php";
-require "prepare_and_execute_sql.php";
+require "./color.php";
+require "./prepare_and_execute_sql.php";
 
 function mixer($userid, $paletteid, $color_array) {
     $how_many_colors = array();

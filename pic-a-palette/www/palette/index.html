@@ -25,35 +25,38 @@
     </header>
 
     <section class="random-background">
-    <section class="BodySection">
-      <div class="TitleDIV">Creating a Palette...</div>
-      <div class="SelectingBody">
-        <div></div>
-        <div class="Register">
-          <div>
-            <img class="Pictures" src="2.jpg" />
-          </div>
-          <div class="Buttons">
-            <div class="yesDIV">
-              <button class="yes_button" id="yes_button">Yes</button>
+      <section class="BodySection">
+        <div class="TitleDIV">Creating a Palette...</div>
+        <div class="SelectingBody">
+          <div></div>
+          <div class="Register">
+            <div>
+              <img class="Pictures" src="2.jpg" />
             </div>
-            <div class="noDIV">
-              <button class="no_button" id="no_button">No</button>
+            <div class="Buttons">
+              <div class="yesDIV">
+                <button class="yes_button" id="yes_button">Yes</button>
+              </div>
+              <div class="noDIV">
+                <button class="no_button" id="no_button">No</button>
+              </div>
             </div>
           </div>
+          <div></div>
         </div>
-        <div></div>
-      </div>
+      </section>
+      <footer class="Footer"></footer>
     </section>
-    <footer class="Footer"></footer>
-  </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="palette.js"></script>
   </body>
   <script>
-    CSS.paintWorklet.addModule('Background.js');
-    document.documentElement.style.setProperty('--pattern-seed', Math.random() * 20000);
+    CSS.paintWorklet.addModule("Background.js");
+    document.documentElement.style.setProperty(
+      "--pattern-seed",
+      Math.random() * 20000
+    );
   </script>
-  
+
   <script type="module" src="./Background.js"></script>
 </html>

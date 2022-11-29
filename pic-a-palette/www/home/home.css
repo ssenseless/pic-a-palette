@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 
 * {
   box-sizing: border-box;
-  font-family: 'Aclonica';
+  font-family: "Aclonica";
 }
 
 html,
@@ -39,7 +39,6 @@ body {
   padding: 10px;
 }
 
-
 .Tabs {
   display: inline;
   font-size: 4em;
@@ -51,7 +50,7 @@ body {
 }
 
 .Tabs:hover {
-  background-color: rgba(255, 255, 255, .3);
+  background-color: rgba(255, 255, 255, 0.3);
   background-size: 20px;
 }
 
@@ -106,7 +105,7 @@ body {
 }
 
 .Login {
-  background-image: url('Images/LoginBackground.png');
+  background-image: url("Images/LoginBackground.png");
   background-size: cover;
   background-repeat: no-repeat;
   border: 2px solid rgb(0, 0, 0);
@@ -158,7 +157,7 @@ body {
   background-size: cover;
   padding-bottom: 120px;
 }
-.FooterTitle{
+.FooterTitle {
   color: rgb(246, 246, 246);
   font-size: 20pt;
   padding-top: 1%;
@@ -180,13 +179,12 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 25px;
-
 }
-.ColorText{
+.ColorText {
   font-size: 15pt;
 }
 
-.ColorPaletteLeft{
+.ColorPaletteLeft {
   margin-top: 35px;
   display: inline-block;
   width: 200px;
@@ -195,9 +193,8 @@ body {
   border-radius: 25px;
   position: relative;
   left: 58%;
-
 }
-.ColorPaletteRight{
+.ColorPaletteRight {
   margin-top: 35px;
   display: inline-block;
   width: 200px;
@@ -205,14 +202,14 @@ body {
   padding-top: 15px;
   border-radius: 25px;
 }
-.ColorText{
+.ColorText {
   color: rgb(246, 246, 246);
 }
-.hexColor{
-    color: rgb(246, 246, 246);
+.hexColor {
+  color: rgb(246, 246, 246);
 }
 
-.dotMain{
+.dotMain {
   margin-top: 5%;
   margin-bottom: 5%;
 }
