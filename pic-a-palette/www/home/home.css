@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
+<<<<<<< Updated upstream
 *{
     box-sizing: border-box;
     font-family: 'Aclonica';
     color: darkslategrey;
+=======
+* {
+  box-sizing: border-box;
+  font-family: 'Aclonica';
+  color: darkslategrey;
+>>>>>>> Stashed changes
 }
 
 html, body{
@@ -11,6 +18,7 @@ html, body{
     padding: 0;
 }
 
+<<<<<<< Updated upstream
 
 .nav li{
     display: inline;
@@ -24,6 +32,18 @@ html, body{
 .nav a:hover{
     background-color: rgba(255,255,255, .3);
 }
+=======
+.nav li {
+  display: inline;
+  margin: 20px;
+}
+
+.nav a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+}
+>>>>>>> Stashed changes
 
 .HeaderDIV {
     display: grid;
@@ -34,6 +54,7 @@ html, body{
     text-align: center;
 }
 
+<<<<<<< Updated upstream
 .main-header{
     /*Placeholder photo for testing*/
     background-image: url('Images/1.jpg');
@@ -58,6 +79,46 @@ html, body{
     grid-template-rows: 1fr;
     padding: 15px;
     text-align: center;
+=======
+.main-header {
+  /*Placeholder photo for testing*/
+  background-size: cover;
+  background-color: rgb(74, 79, 80);
+  background-blend-mode: multiply;
+  padding: 10px;
+}
+
+
+.Tabs {
+  display: inline;
+  font-size: 4em;
+  top: 20%;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+.Tabs:hover {
+  background-color: rgba(255, 255, 255, .3);
+  background-size: 20px;
+}
+
+.Tabs:active {
+  color: blue;
+  background-color: rgb(74, 79, 80);
+}
+
+.BodySection {
+  background-image: url('Images/Splash-Blue.png');
+  background-repeat: no-repeat;
+  background-position: 10% 50%;
+  background-color: rgb(246, 246, 246);
+  display: grid;
+  grid-template-rows: 1fr;
+  padding: 15px;
+  text-align: center;
+>>>>>>> Stashed changes
 }
 
 .TitleDIV{
@@ -70,6 +131,7 @@ html, body{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+<<<<<<< Updated upstream
 .Login{
     border: solid rgb(0, 0, 0);
     padding: 20px;
@@ -81,6 +143,70 @@ html, body{
 .FooterSection{
     background-color: rgb(255, 252, 219);
     padding-bottom: 120px;
+=======
+.Login {
+  background-image: url('Images/LoginBackground.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  background-color: rgb(194, 227, 246);
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.form-group {
+  padding-bottom: 10px;
+  text-align: right;
+}
+
+.login {
+  background-color: rgb(219, 219, 219);
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.input {
+  border-radius: 5px;
+}
+
+.login:hover {
+  background-color: #bbb;
+}
+
+.login:active {
+  background-color: rgb(219, 219, 219);
+}
+
+.register {
+  background-color: rgb(219, 219, 219);
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.register:hover {
+  background-color: #bbb;
+}
+
+.register:active {
+  background-color: rgb(219, 219, 219);
+}
+
+.Footer{
+  background-color: rgb(74, 79, 80);
+  background: cover;
+}
+.FooterSection {
+  background-size: cover;
+  background-color: rgb(246, 246, 246);
+  padding-bottom: 120px;
+>>>>>>> Stashed changes
+}
+.FooterTitle{
+  color: rgb(246, 246, 246);
+  font-size: 20pt;
+  margin: 2%;
 }
 
 .FooterDIV{
@@ -89,6 +215,7 @@ html, body{
     text-align: center;
 }
 
+<<<<<<< Updated upstream
 
 .FooterBody{
     display: grid;
@@ -112,3 +239,63 @@ html, body{
 
 
 
+=======
+.FooterBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 25px;
+
+}
+.ColorText{
+  font-size: 15pt;
+}
+
+.ColorPaletteLeft{
+  margin-top: 35px;
+  display: inline-block;
+  width: 200px;
+  background-color: rgb(74, 79, 80);
+  padding-top: 15px;
+  border-radius: 25px;
+  position: relative;
+  left: 58%;
+
+}
+.ColorPaletteRight{
+  margin-top: 35px;
+  display: inline-block;
+  width: 200px;
+  background-color: rgb(74, 79, 80);
+  padding-top: 15px;
+  border-radius: 25px;
+}
+.ColorText{
+  color: rgb(246, 246, 246);
+}
+.hexColor{
+    color: rgb(246, 246, 246);
+}
+
+.dotMain{
+  margin-top: 5%;
+}
+.dot {
+  height: 50px;
+  width: 50px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.PhotoSection {
+  border: solid rgb(0, 0, 0);
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+#photosection img {
+  max-width: 400px;
+  max-height: 300px;
+  object-fit: contain;
+}
+>>>>>>> Stashed changes
