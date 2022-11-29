@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Aclonica';
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  display: inline;
+  margin: 40px;
+}
+
+.nav a {
+  display: inline-block;
+  color: rgb(194, 227, 246);
+  text-decoration: none;
+}
+
+.HeaderDIV {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.HeaderSec {
+  text-align: center;
+}
+
+.main-header {
+  /*Placeholder photo for testing*/
+  background-size: cover;
+  background-color: rgb(26, 26, 26);
+  background-blend-mode: multiply;
+  padding: 10px;
+}
+
+
+.Tabs {
+  display: inline;
+  font-size: 4em;
+  top: 20%;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid rgb(92, 92, 92);
+  border-radius: 25%;
+}
+
+.Tabs:hover {
+  background-color: rgba(255, 255, 255, .3);
+  background-size: 20px;
+}
+
+.Tabs:active {
+  color: rgb(101, 99, 99);
+  background-color: rgb(26, 26, 26);
+}
+
+.BodySection {
+  display: grid;
+  grid-template-rows: 1fr;
+  padding: 15px;
+  text-align: center;
+}
+.random-background {
+  background-image: paint(voronoiPattern);
+}
+@property --pattern-seed {
+  syntax: "<number>";
+  initial-value: 60000;
+  inherits: true;
+}
+
+@property --pattern-background {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #5989b7;
+}
+
+@property --pattern-colors {
+  syntax: "<color>#";
+  initial-value: #391f3c, rgb(101, 99, 99);
+  inherits: true;
+}
+
+.TitleDIV {
+  padding: 15px;
+  font-size: 60pt;
+  color: rgb(246, 246, 246);
+  font-size: 20pt;
+  padding-bottom: 1%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: rgb(26, 26, 26);
+  background: cover;
+  border-radius: 15px;
+}
+
+.BodyDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.Login {
+  background-image: url('Images/LoginBackground.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  background-color: #5989b7;
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.form-group {
+  padding-bottom: 10px;
+  text-align: right;
+}
+
+.login {
+  background-color: rgb(219, 219, 219);
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.input {
+  border-radius: 5px;
+}
+
+.login:hover {
+  background-color: #bbb;
+}
+
+.login:active {
+  background-color: rgb(219, 219, 219);
+}
+
+.register {
+  background-color: rgb(219, 219, 219);
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.register:hover {
+  background-color: #bbb;
+}
+
+.register:active {
+  background-color: rgb(219, 219, 219);
+}
+
+.FooterSection {
+  background-size: cover;
+  padding-bottom: 120px;
+}
+.FooterTitle{
+  color: rgb(246, 246, 246);
+  font-size: 20pt;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: rgb(26, 26, 26);
+  background: cover;
+  border-radius: 15px;
+}
+
+.FooterDIV {
+  display: grid;
+  grid-template-rows: 1fr;
+  text-align: center;
+}
+
+.FooterBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 25px;
+
+}
+.ColorText{
+  font-size: 15pt;
+}
+
+.ColorPaletteLeft{
+  margin-top: 35px;
+  display: inline-block;
+  width: 200px;
+  background-color: rgb(26, 26, 26);
+  padding-top: 15px;
+  border-radius: 25px;
+  position: relative;
+  left: 58%;
+
+}
+.ColorPaletteRight{
+  margin-top: 35px;
+  display: inline-block;
+  width: 200px;
+  background-color: rgb(26, 26, 26);
+  padding-top: 15px;
+  border-radius: 25px;
+}
+.ColorText{
+  color: rgb(246, 246, 246);
+}
+.hexColor{
+    color: rgb(246, 246, 246);
+}
+
+.dotMain{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.dot {
+  height: 50px;
+  width: 50px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.PhotoSection {
+  border: solid rgb(0, 0, 0);
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+#photosection img {
+  max-width: 400px;
+  max-height: 300px;
+  object-fit: contain;
+}

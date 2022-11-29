@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<style></style>
+<html>
+  <head>
+    <title>Pic-A-Palette</title>
+    <meta name="description" content="This is the description" />
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+    <header class="main-header">
+      <div class="HeaderDIV">
+        <div class="HeaderSec">
+          <img src="" class="HeaderPic" />
+        </div>
+        <div class="HeaderSec">
+          <nav class="nav">
+            <li><a class="Tabs" href="index.html">Home</a></li>
+            <li><a class="Tabs" href="../about/index.html">About</a></li>
+          </nav>
+        </div>
+        <div class="HeaderSec">
+          <img src="" class="HeaderPic" />
+        </div>
+      </div>
+    </header>
+
+    <section class="random-background">
+      <section class="BodySection">
+        <h1 class="TitleDIV">
+          Pic-A-Pallete
+        </h1>
+        <div class="BodyDiv">
+          <div class="empty"></div>
+          <div class="Login">
+            <div>
+              <h2>Login/Register</h2>
+              <div class="form-group">
+                <label htmlFor="name" class="logintext">Name:</label>
+                <input type="text" class="input" id="name" />
+              </div>
+              <div class="form-group">
+                <label htmlFor="email" class="logintext">Email:</label>
+                <input type="email" class="input" id="email" />
+              </div>
+              <div class="form-group">
+                <label htmlFor="password" class="logintext">Password:</label>
+                <input type="password" class="input" id="password" />
+              </div>
+              <a href="../profile/index.html"><input type="submit" value="LOGIN" id="login" class="login" /></a>
+              <input type="submit" value="REGISTER" id="register" class="register" />
+            </div>
+          </div>
+          <div class="empty"></div>
+      </section>
+    </body>
+
+    <footer class="FooterSection">
+      <div class="FooterDIV">
+        <div class="Footer">
+          <h4 class="FooterTitle">Sample Picture Palettes</h4>
+        </div>
+        <div class="FooterBody">
+          <div class="ColorPaletteLeft">
+            <div class="ColorText">Color Palette</div>
+            <div class="dotMain">
+              <div class="dot" id="dot1"></div>
+              <div class="hexColor">Hex:</div>
+            </div>
+            <div class="dotMain">
+              <div class="dot" id="dot2"></div>
+              <div class="hexColor">Hex:</div>
+            </div>
+            <div class="dotMain">
+              <div class="dot" id="dot3"></div>
+              <div class="hexColor">Hex:</div>
+            </div>
+          </div>
+          <div id="photosection">
+            <img class="PhotoSection" src="" id="photo" />
+          </div>
+          <div class="ColorPaletteRight">
+            <div class="ColorText">Color Palette</div>
+            <div class="dotMain">
+              <div class="dot" id="dot4"></div>
+              <div class="hexColor">Hex:</div>
+            </div>
+            <div class="dotMain">
+              <div class="dot" id="dot5"></div>
+              <div class="hexColor">Hex:</div>
+            </div>
+            <div class="dotMain">
+              <div class="dot" id="dot6"></div>
+              <div class="hexColor">Hex:</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="home.js"></script>
+  <script>
+    CSS.paintWorklet.addModule('Background.js');
+    document.documentElement.style.setProperty('--pattern-seed', Math.random() * 20000);
+  </script>
+  
+  <script type="module" src="./Background.js"></script>
+  
+</html>
