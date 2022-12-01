@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 * {
   box-sizing: border-box;
-  font-family: "Aclonica";
+  font-family: 'Aclonica';
 }
 
 html,
@@ -37,26 +37,6 @@ body {
   background-color: rgb(26, 26, 26);
   background-blend-mode: multiply;
   padding: 10px;
-}
-
-.Tabs {
-  display: inline;
-  font-size: 4em;
-  top: 20%;
-  font-size: 20px;
-  padding: 10px;
-  border: 1px solid rgb(92, 92, 92);
-  border-radius: 25%;
-}
-
-.Tabs:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  background-size: 20px;
-}
-
-.Tabs:active {
-  color: rgb(101, 99, 99);
-  background-color: rgb(26, 26, 26);
 }
 
 .BodySection {
@@ -105,7 +85,7 @@ body {
 }
 
 .Login {
-  background-image: url("Images/LoginBackground.png");
+  background-image: url('Images/LoginBackground.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: 2px solid rgb(0, 0, 0);
@@ -121,18 +101,20 @@ body {
   text-align: right;
 }
 
-.login {
-  background-color: rgb(219, 219, 219);
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
 .input {
   border-radius: 5px;
 }
 
+.login {
+  color: rgb(246, 246, 246);
+  background-color: rgb(26, 26, 26);
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 3px;
+}
 .login:hover {
-  background-color: #bbb;
+  color: rgb(246, 246, 246);
+  background-color: rgba(255, 255, 255, 0.13);
 }
 
 .login:active {
@@ -140,13 +122,16 @@ body {
 }
 
 .register {
-  background-color: rgb(219, 219, 219);
+  color: rgb(246, 246, 246);
+  background-color: rgb(26, 26, 26);
   border-radius: 5px;
-  margin-left: 10px;
+  margin-right: 10px;
+  padding: 3px;
 }
 
 .register:hover {
-  background-color: #bbb;
+  color: rgb(246, 246, 246);
+  background-color: rgba(255, 255, 255, 0.13);
 }
 
 .register:active {
@@ -157,7 +142,7 @@ body {
   background-size: cover;
   padding-bottom: 120px;
 }
-.FooterTitle {
+.FooterTitle{
   color: rgb(246, 246, 246);
   font-size: 20pt;
   padding-top: 1%;
@@ -179,12 +164,13 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 25px;
+
 }
-.ColorText {
+.ColorText{
   font-size: 15pt;
 }
 
-.ColorPaletteLeft {
+.ColorPaletteLeft{
   margin-top: 35px;
   display: inline-block;
   width: 200px;
@@ -193,8 +179,9 @@ body {
   border-radius: 25px;
   position: relative;
   left: 58%;
+
 }
-.ColorPaletteRight {
+.ColorPaletteRight{
   margin-top: 35px;
   display: inline-block;
   width: 200px;
@@ -202,22 +189,23 @@ body {
   padding-top: 15px;
   border-radius: 25px;
 }
-.ColorText {
+.ColorText{
   color: rgb(246, 246, 246);
 }
-.hexColor {
-  color: rgb(246, 246, 246);
+.hexColor{
+    color: rgb(246, 246, 246);
 }
 
-.dotMain {
+.dotMain{
   margin-top: 5%;
   margin-bottom: 5%;
 }
 .dot {
   height: 50px;
   width: 50px;
-  background-color: #bbb;
   border-radius: 50%;
+  background-color: #bbb;
+  border: solid white;
   display: inline-block;
 }
 
@@ -231,4 +219,91 @@ body {
   max-width: 400px;
   max-height: 300px;
   object-fit: contain;
+}
+
+.Tab {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  overflow: hidden;
+  border: 1px solid rgb(0, 0, 0);
+  font-weight: 300;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 15px;
+}
+.Tab button {
+  width: 101%;
+  height: 100%;
+  font-weight: 300;
+  font-size: 12pt;
+  letter-spacing: 1px;
+  font-weight: bold;
+  background: #5989b7;
+  -webkit-mask: url("Images/sprite.png");
+  mask: url("Images/sprite.png");
+  -webkit-mask-size: 3000% 100%;
+  mask-size: 3000% 100%;
+  border: none;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(29) forwards;
+  animation: ani2 0.7s steps(29) forwards;
+}
+.Tab button:hover {
+  -webkit-animation: ani 0.7s steps(29) forwards;
+  animation: ani 0.7s steps(29) forwards;
+}
+
+.mask {
+  position: absolute;
+  color: #5989b7;
+  text-align: center;
+  width: 101%;
+  font-weight: 300;
+  position: absolute;
+  font-size: 12pt;
+  margin-top: 17px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
 }

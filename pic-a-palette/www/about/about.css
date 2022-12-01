@@ -3,7 +3,8 @@
 * {
   box-sizing: border-box;
   font-family: 'Aclonica';
-  color: rgb(194, 227, 246);
+  color: rgb(26, 26, 26);
+  font: bold;
 }
 
 html,
@@ -33,32 +34,12 @@ body {
 }
 
 .main-header {
-  /*Placeholder photo for testing*/
   background-size: cover;
   background-color: rgb(26, 26, 26);
   background-blend-mode: multiply;
   padding: 10px;
 }
 
-.Tabs {
-  display: inline;
-  font-size: 4em;
-  top: 20%;
-  font-size: 20px;
-  padding: 10px;
-  border: 1px solid rgb(92, 92, 92);
-  border-radius: 25%;
-}
-
-.Tabs:hover {
-  background-color: rgba(255, 255, 255, .3);
-  background-size: 20px;
-}
-
-.Tabs:active {
-  color: rgb(101, 99, 99);
-  background-color: rgb(26, 26, 26);
-}
 .BodySection {
   display: grid;
   grid-template-rows: 1fr;
@@ -80,12 +61,12 @@ body {
 @property --pattern-background {
   syntax: "<color>";
   inherits: false;
-  initial-value: #5989b7;
+  initial-value: #bd7fab;
 }
 
 @property --pattern-colors {
   syntax: "<color>#";
-  initial-value: #391f3c, rgb(101, 99, 99);
+  initial-value: #4ee269, rgb(101, 99, 99);
   inherits: true;
 }
 
@@ -150,4 +131,92 @@ body {
 }
 .photo1{
     width: 100px;
+}
+
+.Tab {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  overflow: hidden;
+  border: 1px solid rgb(0, 0, 0);
+  font-weight: 300;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 15px;
+}
+.Tab button {
+  width: 101%;
+  height: 100%;
+  font-weight: 300;
+  font-size: 12pt;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: rgb(26, 26, 26);
+  background: #bd7fab;
+  -webkit-mask: url("Images/sprite.png");
+  mask: url("Images/sprite.png");
+  -webkit-mask-size: 3000% 100%;
+  mask-size: 3000% 100%;
+  border: none;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(29) forwards;
+  animation: ani2 0.7s steps(29) forwards;
+}
+.Tab button:hover {
+  -webkit-animation: ani 0.7s steps(29) forwards;
+  animation: ani 0.7s steps(29) forwards;
+}
+
+.mask {
+  position: absolute;
+  color: #bd7fab;
+  text-align: center;
+  width: 101%;
+  font-weight: 300;
+  position: absolute;
+  font-size: 12pt;
+  margin-top: 17px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
 }

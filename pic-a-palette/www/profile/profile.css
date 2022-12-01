@@ -30,7 +30,11 @@ body {
 
 .HeaderSec {
   text-align: center;
+}
+.HeaderSecName{
+  text-align: center;
   font-size: 25pt;
+  padding-top: 2%;
 }
 
 .main-header {
@@ -80,12 +84,12 @@ body {
 @property --pattern-background {
   syntax: "<color>";
   inherits: false;
-  initial-value: #5989b7;
+  initial-value: #59b791;
 }
 
 @property --pattern-colors {
   syntax: "<color>#";
-  initial-value: #391f3c, rgb(101, 99, 99);
+  initial-value: #556fd8, rgb(134, 47, 47);
   inherits: true;
 }
 
@@ -93,18 +97,6 @@ body {
   padding: 20px;
 }
 
-.CreateButton {
-  font-size: 25pt;
-  background-color: rgb(26, 26, 26);
-  border-radius: 15px;
-  padding: 1%;
-}
-.CreateButton:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.CreateButton:active {
-  background-color: rgb(26, 26, 26);
-}
 .CreateLink {
   text-decoration: none;
 }
@@ -120,29 +112,96 @@ body {
 .ScrollBar {
   background-color: rgb(26, 26, 26);
   border: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 10px;
   padding: 5px;
   width: auto;
   height: 600px;
   overflow: scroll;
 }
+.ScrollBar::-webkit-scrollbar{
+  width: 15px;
+}
+/* Track */
+.ScrollBar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(229, 229, 229); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.ScrollBar::-webkit-scrollbar-thumb {
+  background: rgb(194, 227, 246);
+  border-radius: 5px;
+  border: 1px solid rgb(26, 26, 26);
+}
+
+/* Handle on hover */
+.ScrollBar::-webkit-scrollbar-thumb:hover {
+  background: rgb(165, 191, 207);; 
+}
 
 .ScrollGrid {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
 }
 
 .Grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  border-bottom: 2px solid rgb(0, 0, 0);
+  border-bottom: 2px dashed rgb(194, 227, 246);
+  
   padding: 5px;
   text-align: center;
 }
+.gridButtonEdit {
+  display: inline;
+  top: 20%;
+  font-size: 15pt;
+  padding: 10px;
+  background-color: rgb(26, 26, 26);
+  border: 1px solid rgb(92, 92, 92);
+  border-radius: 15%;
+}
+.gridButtonEdit:hover {
+  background-color: rgba(17, 64, 251, 0.3);
+  background-size: 20px;
+}
 
+.gridButtonEdit:active {
+  color: rgb(101, 99, 99);
+  background-color: rgb(26, 26, 26);
+}
+
+.gridButtonsDelete {
+  display: inline;
+  top: 20%;
+  font-size: 15pt;
+  padding: 10px;
+  background-color: rgb(26, 26, 26);
+  border: 1px solid rgb(92, 92, 92);
+  border-radius: 15%;
+}
+.gridButtonsDelete:hover {
+  background-color: rgba(255, 2, 18, 0.3);
+  background-size: 20px;
+}
+
+.gridButtonsDelete:active {
+  color: rgb(101, 99, 99);
+  background-color: rgb(26, 26, 26);
+}
 .C1 {
   display: grid;
   grid-template-rows: 1fr 50px;
   padding: 5px;
+  border-right: 1px solid rgb(194, 227, 246);;
+  padding-right: 10px;
+}
+
+.C7{
+  border-left: 1px solid rgb(194, 227, 246);;
+  padding-left: 10px;
+  padding-top: 10%;
 }
 
 .GDes {
@@ -155,11 +214,12 @@ body {
   padding: 5px;
 }
 
-.Circle {
+.dot {
   height: 50px;
   width: 50px;
-  background-color: #bbb;
   border-radius: 50%;
+  border: solid white;
+  background-color: #bbb;
   position: relative;
   right: 55%;
   left: 35%;
@@ -177,3 +237,153 @@ body {
 .Footer {
   padding: 220px;
 }
+
+.Tab {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  overflow: hidden;
+  border: 1px solid rgb(0, 0, 0);
+  font-weight: 300;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 15px;
+}
+.Tab button {
+  width: 101%;
+  height: 100%;
+  font-weight: 300;
+  font-size: 12pt;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: rgb(26, 26, 26);
+  background: #59b791;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  -webkit-mask-size: 3000% 100%;
+  mask-size: 3000% 100%;
+  border: none;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(29) forwards;
+  animation: ani2 0.7s steps(29) forwards;
+}
+.Tab button:hover {
+  -webkit-animation: ani 0.7s steps(29) forwards;
+  animation: ani 0.7s steps(29) forwards;
+}
+
+.mask {
+  position: absolute;
+  color: #59b791;
+  text-align: center;
+  width: 101%;
+  font-weight: 300;
+  position: absolute;
+  font-size: 12pt;
+  margin-top: 15px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+.CreateButton {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  border: 1px solid #59b791;
+  background: rgb(134, 47, 47);
+  font-weight: 300;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 15px;
+}
+.CreateButton button {
+  width: 101%;
+  height: 100%;
+  font-weight: 300;
+  font-size: 25pt;
+  letter-spacing: 8px;
+  font-weight: bold;
+  color: rgb(134, 47, 47);
+  background: rgb(26, 26, 26);
+  -webkit-mask: url("Images/sprite.png");
+  mask: url("Images/sprite.png");
+  -webkit-mask-size: 3000% 100%;
+  mask-size: 3000% 100%;
+  border: none;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(29) forwards;
+  animation: ani2 0.7s steps(29) forwards;
+}
+.CreateButton button:hover {
+  -webkit-animation: ani 0.7s steps(29) forwards;
+  animation: ani 0.7s steps(29) forwards;
+}
+
+.mask2 {
+  position: absolute;
+  color:#556fd8;
+  text-align: center;
+  width: 101%;
+  font-weight: 300;
+  font-size: 25pt;
+  margin-top: 5px;
+  overflow: hidden;
+  font-weight: bold;
+  letter-spacing: 8px;
+}
+
+
+/* .CreateButton {
+  font-size: 25pt;
+  background-color: rgb(26, 26, 26);
+  border-radius: 15px;
+  padding: 1%;
+}
+.CreateButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.CreateButton:active {
+  background-color: rgb(26, 26, 26);
+} */

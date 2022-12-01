@@ -22,7 +22,7 @@ class VoronoiPattern {
     const { cells } = createVoronoiTessellation({
       width,
       height,
-      points: [...Array(110)].map(() => ({
+      points: [...Array(300)].map(() => ({
         x: random.float(0, width),
         y: random.float(0, height)
       }))
