@@ -190,7 +190,8 @@ body {
 }
 
 .Footer {
-  padding: 220px;
+  padding-top: 10px;
+  padding-bottom: 200px;
 }
 
 .Tab {
@@ -288,4 +289,46 @@ body {
     -webkit-mask-position: 0 0;
     mask-position: 0 0;
   }
+}
+
+.saveGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+
+.saveSection{
+  padding: 10px;
+  background-color: rgb(26, 26, 26);
+  background: cover;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  text-align: center;
+}
+.saveForm{
+  display: inline-block;
+}
+.paletteName{
+  border-radius: 5px;
+  font-size: 15pt;
+}
+.saveTitle{
+  color: rgb(246, 246, 246);
+  font-size: 20pt;
+}
+
+.saveButton {
+  background-color: #b8b95e;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: medium;
+}
+
+.saveButton:hover {
+  background-color: rgb(148, 164, 212);
+}
+
+.saveButton:active {
+  background-color: #bff23e;
 }
