@@ -1,7 +1,7 @@
 <?php
 
-require "./color.php";
-require "./prepare_and_execute_sql.php";
+require "color.php";
+require "prepare_and_execute_sql.php";
 
 function mixer($userid, $paletteid, $color_array) {
     $how_many_colors = array();
@@ -37,6 +37,8 @@ function mixer($userid, $paletteid, $color_array) {
     
     $query = prepare_and_execute_sql("SELECT * 
                                         FROM pic_a_palette.palette_count 
+                                        WHERE user_id = $userid AND
+                                              palette_id = $paletteid 
                                         ORDER BY count DESC 
                                         LIMIT 6");
 
@@ -46,7 +48,9 @@ function mixer($userid, $paletteid, $color_array) {
 
     $query = prepare_and_execute_sql("SELECT SUM(inner_table.count) AS count 
                                         FROM (SELECT count 
-                                                FROM palette_count 
+                                                FROM palette_count
+                                                WHERE user_id = $userid AND
+                                                      palette_id = $paletteid 
                                                 ORDER BY count DESC 
                                                 LIMIT 6) AS inner_table");
     $total = $query->fetch_assoc()['count'];
@@ -87,6 +91,19 @@ function mixer($userid, $paletteid, $color_array) {
         );
     }
 
+    
+    $query = prepare_and_execute_sql("SELECT 1 
+                                FROM pic_a_palette.user_palettes
+                                WHERE user_id = $userid AND
+                                      palette_id = $paletteid");
+
+    if (mysqli_num_rows($query) == 0) {
+        prepare_and_execute_sql("INSERT INTO pic_a_palette.user_palettes(user_id, palette_id)
+                                    VALUES ($userid, $paletteid)");
+    }
+
+
+    $count = 1;
     foreach ($how_many_colors as $row) {
         $row_color_type = $row['color_type'];
         $row_count = $row['count'];
@@ -99,10 +116,16 @@ function mixer($userid, $paletteid, $color_array) {
                                             ORDER BY RAND()
                                             LIMIT $row_count");
         while ($color = $query->fetch_assoc()) {
-            array_push($final_six_colors, new color(-1, -1, -1, $color['hex']));
+            $color_hex = $color['hex'];
+            
+            prepare_and_execute_sql("UPDATE pic_a_palette.user_palettes
+                                        SET hex$count = '$color_hex'
+                                        WHERE user_id = $userid AND
+                                              palette_id = $paletteid");
+            array_push($final_six_colors, $color_hex);
+            $count++;
         }
     }
-    
     return $final_six_colors;
 }
 
@@ -125,7 +148,7 @@ function mix($userid, $paletteid, $color) {
         $mixed_col = new color($r, $g, $b, null);
 
         if ($mixed_col->type != $color->type) {
-            mixer($userid, $paletteid, array($mixed_col));
+            //todo: fix mixing into other colortypes. not overall important so finish other tasks first.
             $flag++;
         }
         else {

@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  var home_color_timeout;
+  var home_picture_timeout;
+
   (function random_picture() {
     var rand = ("00" + Math.floor(Math.random() * 91 + 1)).slice(-3);
     var count = 1;
@@ -33,7 +36,7 @@ $(document).ready(function () {
       count++;
 
       if (count < 11) {
-        var home_color_timeout = setTimeout(function () {
+        home_color_timeout = setTimeout(function () {
           home_color(count);
         }, 999);
       } else {
@@ -41,14 +44,11 @@ $(document).ready(function () {
       }
     })(count);
 
-    setTimeout(random_picture, 10000);
+    home_picture_timeout = setTimeout(random_picture, 10000);
   })();
 
   $("#login").click(function (event) {
     event.preventDefault();
-
-    console.log($("#username").val());
-    console.log($("#password").val());
 
     $.ajax({
       type: "POST",
@@ -96,5 +96,11 @@ $(document).ready(function () {
         }
       },
     });
+  });
+
+  $("#about").click(function (event) {
+    event.preventDefault();
+
+    window.location.href = "../about/index.html";
   });
 });

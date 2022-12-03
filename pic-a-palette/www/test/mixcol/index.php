@@ -3,9 +3,9 @@
 require_once "../../../secure/functions/mixer.php";
 require_once "../../../secure/functions/palettize.php";
 
-$num = 16;
+$num = 42;
 
-$palettize = new palettize("../../../secure/data/permanent/1" . sprintf('%02d', $num) . ".jpg");
+$palettize = new palettize("../../../secure/data/permanent/0" . sprintf('%02d', $num) . ".jpg");
 $palette = mixer(1, 1, $palettize->color);
 
 

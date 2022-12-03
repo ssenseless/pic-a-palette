@@ -1,6 +1,6 @@
 <?php 
 
-require_once "./color.php";
+require_once "color.php";
 
 class palettize {
 

@@ -13,9 +13,6 @@ function prepare_and_execute_sql($sql) {
     die("Connection failed: " . $conn->connect_error);
     }
 
-    $username = 'ssenseless';
-    $password = 'oh yeah';
-
     $result = $conn->query($sql);
 
     return $result;

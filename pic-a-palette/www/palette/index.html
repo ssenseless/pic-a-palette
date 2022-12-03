@@ -16,18 +16,22 @@
         <div class="HeaderSec">
           <nav class="nav">
             <li>
-              <a href="../profile/index.html">
+              <a>
                 <div class="Tab">
                   <span class="mask">BACK</span>
-                  <button type="button" name="Hover">BACK</button>
+                  <button type="button" name="Hover" type="button" id="back">
+                    BACK
+                  </button>
                 </div>
               </a>
             </li>
             <li>
-              <a href="../profile/index.html">
+              <a>
                 <div class="Tab">
                   <span class="mask">CANCEL</span>
-                  <button type="button" name="Hover">CANCEL</button>
+                  <button type="button" name="Hover" type="button" id="cancel">
+                    CANCEL
+                  </button>
                 </div>
               </a>
             </li>
@@ -47,21 +51,21 @@
             <div class="ColorText">Color Palette</div>
             <div class="dotMain">
               <div class="dot" id="dot1"></div>
-              <div class="hexColor" id="hex4"></div>
+              <div class="hexColor" id="hex1"></div>
             </div>
             <div class="dotMain">
               <div class="dot" id="dot2"></div>
-              <div class="hexColor" id="hex5"></div>
+              <div class="hexColor" id="hex2"></div>
             </div>
             <div class="dotMain">
               <div class="dot" id="dot3"></div>
-              <div class="hexColor" id="hex6"></div>
+              <div class="hexColor" id="hex3"></div>
             </div>
           </div>
           <div class="Register">
             <div>
               <!-- Photos will go here, Have a selected Photo here -->
-              <img class="Pictures" src="2.jpg" />
+              <img class="Pictures" src="" id="photobucket" />
             </div>
             <div class="Buttons">
               <div class="yesDIV">
@@ -93,17 +97,13 @@
         <div class="saveGrid">
           <div></div>
           <div class="saveSection">
-            <div class="saveTitle">
-              Name Your Palette, Then Save it
-            </div>
+            <div class="saveTitle">Name Your Palette, Then Save it</div>
             <div class="saveForm">
               <form>
-                <input class="paletteName" type="text" maxlength="20">
-                <a href="../profile/index.html">
-                  <button type="button" class="saveButton">
-                    <div>SAVE PALETTE</div>
-                  </button>
-                </a>
+                <input class="paletteName" type="text" maxlength="20" />
+                <button type="button" class="saveButton" id="save">
+                  <div>SAVE PALETTE</div>
+                </button>
               </form>
             </div>
           </div>
