@@ -5,7 +5,8 @@ session_start();
 $userid = $_SESSION['userid'];
 $query = prepare_and_execute_sql("SELECT *
                                     FROM pic_a_palette.user_palettes
-                                    WHERE user_id = $userid");
+                                    WHERE user_id = $userid
+                                    ORDER BY palette_id");
 
 $retval = array();
 $index = 1;
