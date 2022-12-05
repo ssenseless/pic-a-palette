@@ -20,4 +20,6 @@ foreach ($colors as $hex) {
     $key++;
 }
 
+unset($colors);
+
 echo json_encode($array);

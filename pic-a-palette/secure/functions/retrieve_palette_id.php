@@ -1,5 +1,5 @@
 <?php
-require "prepare_and_execute_sql.php";
+require_once "prepare_and_execute_sql.php";
 session_start();
 
 $userid = $_SESSION['userid'];

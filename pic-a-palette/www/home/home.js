@@ -3,12 +3,12 @@ $(document).ready(function () {
   var home_picture_timeout;
 
   (function random_picture() {
+    clearTimeout(home_color_timeout);
     var rand = ("00" + Math.floor(Math.random() * 91 + 1)).slice(-3);
-    var count = 1;
 
     $("#photo").attr("src", "../../secure/data/permanent/" + rand + ".jpg");
 
-    (function home_color(count) {
+    (function home_color() {
       $.ajax({
         type: "POST",
         data: {
@@ -33,16 +33,10 @@ $(document).ready(function () {
         },
       });
 
-      count++;
-
-      if (count < 11) {
-        home_color_timeout = setTimeout(function () {
-          home_color(count);
-        }, 999);
-      } else {
-        clearTimeout(home_color_timeout);
-      }
-    })(count);
+      home_color_timeout = setTimeout(function () {
+        home_color();
+      }, 1999);
+    })();
 
     home_picture_timeout = setTimeout(random_picture, 10000);
   })();

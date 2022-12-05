@@ -62,7 +62,16 @@ $("#document").ready(function () {
     event.preventDefault();
 
     if (flag) {
-      window.location.href = "../profile/index.html";
+      $.ajax({
+        type: "POST",
+        data: {
+          type: 1,
+        },
+        url: "../../secure/functions/unset.php",
+        success: function (retval) {
+          window.location.href = "../profile/index.html";
+        },
+      });
     } else {
       $.ajax({
         type: "POST",

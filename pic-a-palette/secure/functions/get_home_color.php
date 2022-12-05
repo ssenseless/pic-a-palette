@@ -12,6 +12,8 @@ foreach ($palette->color as $color) {
     $key++;
 }
 
+unset($palette);
+
 $json = json_encode($array);
 
 echo $json;

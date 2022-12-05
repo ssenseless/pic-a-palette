@@ -4,6 +4,8 @@ session_start();
 
 $userid = $_SESSION['userid'];
 unset($_SESSION['paletteid']);
+
+if (isset($_SESSION['editflag'])) {
 unset($_SESSION['editflag']);
 
 prepare_and_execute_sql("DELETE 
@@ -18,3 +20,4 @@ prepare_and_execute_sql("DELETE
                             FROM pic_a_palette.palette_count
                             WHERE user_id = $userid
                             AND palette_id = -1");
+}

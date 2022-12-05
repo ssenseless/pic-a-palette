@@ -6,7 +6,6 @@ $userid = $_SESSION['userid'];
 
 if (isset($_SESSION['paletteid'])) {
     $paletteid = $_SESSION['paletteid'];
-    unset($_SESSION['paletteid']);
 }
 else {
     $paletteid = $_POST['paletteid'];
@@ -56,6 +55,8 @@ if (isset($_SESSION['editflag']) && $_SESSION['editflag'] == true) {
                                         FROM pic_a_palette.palette_hex
                                         WHERE user_id = $userid AND
                                               palette_id = -1");
+    unset($_SESSION['paletteid']);
+    unset($_SESSION['editflag']);
 
     prepare_and_execute_sql("DELETE 
                                 FROM pic_a_palette.user_palettes
@@ -69,5 +70,4 @@ if (isset($_SESSION['editflag']) && $_SESSION['editflag'] == true) {
                                 FROM pic_a_palette.palette_count
                                 WHERE user_id = $userid
                                 AND palette_id = -1");
-    unset($_SESSION['editflag']);
 }
